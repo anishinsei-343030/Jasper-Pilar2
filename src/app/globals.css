@@ -135,6 +135,29 @@ h1, h2, h3, h4, h5, h6 {
   to { transform: rotate(360deg); }
 }
 
+@keyframes tulipFall {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.5;
+  }
+  25% {
+    transform: translateY(25vh) translateX(12px) rotate(8deg);
+  }
+  50% {
+    transform: translateY(50vh) translateX(-8px) rotate(-4deg);
+  }
+  75% {
+    transform: translateY(75vh) translateX(14px) rotate(6deg);
+  }
+  100% {
+    transform: translateY(105vh) translateX(-4px) rotate(-6deg);
+    opacity: 0;
+  }
+}
+
 .gift-card {
   overflow: hidden;
 }

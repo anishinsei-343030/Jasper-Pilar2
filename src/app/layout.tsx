@@ -3,6 +3,7 @@ import { Playfair_Display, Inter, Great_Vibes } from "next/font/google";
 import { AudioProvider } from "@/components/AudioProvider";
 import { MusicToggle } from "@/components/MusicToggle";
 import { FloatingEmbers } from "@/components/FloatingEmbers";
+import { FallingTulips } from "@/components/FallingTulips";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -42,6 +43,7 @@ export default function RootLayout({
       <body className="overflow-x-hidden">
         <AudioProvider>
           <FloatingEmbers count={20} />
+          <FallingTulips count={10} />
           <MusicToggle />
           {children}
         </AudioProvider>
