@@ -11,9 +11,13 @@ export function SunsetHero() {
         transition={{ duration: 1.2, ease: 'easeOut' }}
         className="mb-6"
       >
-        <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-br from-[#ff6b35] to-[#ffd700] p-[3px] shadow-lg">
-          <div className="w-full h-full rounded-full bg-[#2d1b00]/20 flex items-center justify-center">
-            <span className="text-4xl">🌅</span>
+        <div className="w-28 h-28 mx-auto mb-6 rounded-full bg-gradient-to-br from-[#ff6b35] to-[#ffd700] p-[4px] shadow-lg glow-warm">
+          <div className="w-full h-full rounded-full overflow-hidden">
+            <img
+              src="/photos/MainProfile.jpg"
+              alt="Angelyn"
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       </motion.div>

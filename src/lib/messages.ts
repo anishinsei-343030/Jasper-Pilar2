@@ -1,9 +1,3 @@
-export const tracks = [
-  { src: '/music/track-1.mp3', label: 'Track 1' },
-  { src: '/music/track-2.mp3', label: 'Track 2' },
-  { src: '/music/track-3.mp3', label: 'Track 3' },
-]
-
 export const boxes = [
   {
     id: 'memories',
