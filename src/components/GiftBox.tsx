@@ -13,6 +13,7 @@ interface GiftBoxProps {
 }
 
 function PeekPreview({ item, layerIndex }: { item: string; layerIndex: number }) {
+  const opacities = ['opacity-20', 'opacity-35', 'opacity-60', 'opacity-90']
   const emojiSizes = ['text-lg sm:text-xl', 'text-sm sm:text-base', 'text-xs sm:text-sm', 'text-[8px] sm:text-[10px]']
   const textSizes = ['text-[10px] sm:text-xs', 'text-[8px] sm:text-[10px]', 'text-[6px] sm:text-[8px]', 'text-[4px] sm:text-[6px]']
   if (item.startsWith('/photos/') || item.startsWith('/Icons/')) {
@@ -20,15 +21,15 @@ function PeekPreview({ item, layerIndex }: { item: string; layerIndex: number })
       <img
         src={item}
         alt=""
-        className="w-full h-full rounded object-cover opacity-40"
+        className={`w-full h-full rounded object-cover ${opacities[layerIndex]}`}
       />
     )
   }
   if (item.length <= 2) {
-    return <span className={`text-white/40 ${emojiSizes[layerIndex]}`}>{item}</span>
+    return <span className={`text-white ${opacities[layerIndex]} ${emojiSizes[layerIndex]}`}>{item}</span>
   }
   return (
-    <span className={`text-white/35 ${textSizes[layerIndex]} leading-tight text-right max-w-[90%] line-clamp-2`}>
+    <span className={`text-white ${opacities[layerIndex]} ${textSizes[layerIndex]} leading-tight text-right max-w-[90%] line-clamp-2`}>
       {item}
     </span>
   )
