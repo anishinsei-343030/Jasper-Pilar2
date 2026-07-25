@@ -63,7 +63,11 @@ export function GiftBox({ label, tagline, emoji, color, index, peekPreviews, onC
       </div>
       <div className="flex flex-col items-center justify-between h-full p-6 relative z-10">
         <div className="text-5xl mb-2 group-hover:scale-110 transition-transform duration-300">
-          {emoji}
+          {emoji.startsWith('/Icons/') ? (
+            <img src={emoji} alt="" className="w-16 h-16 object-contain mx-auto" />
+          ) : (
+            emoji
+          )}
         </div>
 
         <div
