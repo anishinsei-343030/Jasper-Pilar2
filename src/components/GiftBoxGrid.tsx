@@ -19,6 +19,7 @@ export function GiftBoxGrid({ onOpenBox }: GiftBoxGridProps) {
             emoji={box.emoji}
             color={box.color}
             index={i}
+            peekPreviews={box.peekPreviews}
             onClick={() => onOpenBox(box.id)}
           />
         ))}

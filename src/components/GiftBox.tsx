@@ -8,10 +8,31 @@ interface GiftBoxProps {
   emoji: string
   color: string
   index: number
+  peekPreviews: string[]
   onClick: () => void
 }
 
-export function GiftBox({ label, tagline, emoji, color, index, onClick }: GiftBoxProps) {
+function PeekPreview({ item }: { item: string }) {
+  if (item.startsWith('/photos/')) {
+    return (
+      <img
+        src={item}
+        alt=""
+        className="w-8 h-8 sm:w-10 sm:h-10 rounded object-cover opacity-40"
+      />
+    )
+  }
+  if (item.length <= 2) {
+    return <span className="text-white/40 text-sm sm:text-base">{item}</span>
+  }
+  return (
+    <span className="text-white/35 text-[8px] sm:text-[10px] leading-tight text-right max-w-[90%] line-clamp-2">
+      {item}
+    </span>
+  )
+}
+
+export function GiftBox({ label, tagline, emoji, color, index, peekPreviews, onClick }: GiftBoxProps) {
   return (
     <motion.button
       className="gift-card relative w-full aspect-[4/5] rounded-2xl glass box-shadow cursor-pointer group"
@@ -29,13 +50,17 @@ export function GiftBox({ label, tagline, emoji, color, index, onClick }: GiftBo
         }}
       />
       <div className="peek peek-1" style={{ borderTopColor: `${color}88` }}>
-        <span className="text-white/30 text-lg" style={{ color: `${color}` }}>✦</span>
+        <PeekPreview item={peekPreviews[0]} />
       </div>
       <div className="peek peek-2" style={{ borderTopColor: `${color}66` }}>
-        <span className="text-white/20 text-sm" style={{ color: `${color}` }}>✦</span>
+        <PeekPreview item={peekPreviews[1]} />
       </div>
-      <div className="peek peek-3" style={{ borderTopColor: `${color}44` }} />
-      <div className="peek peek-4" style={{ borderTopColor: `${color}22` }} />
+      <div className="peek peek-3" style={{ borderTopColor: `${color}44` }}>
+        <PeekPreview item={peekPreviews[2]} />
+      </div>
+      <div className="peek peek-4" style={{ borderTopColor: `${color}22` }}>
+        <PeekPreview item={peekPreviews[3]} />
+      </div>
       <div className="flex flex-col items-center justify-between h-full p-6 relative z-10">
         <div className="text-5xl mb-2 group-hover:scale-110 transition-transform duration-300">
           {emoji}
