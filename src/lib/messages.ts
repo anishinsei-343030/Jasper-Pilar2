@@ -5,7 +5,7 @@ export const boxes = [
     tagline: 'Memories we carry',
     emoji: '📸',
     color: '#1D4ED8',
-    peekPreviews: ['/photos/Photo1.jpg', '/photos/Photo2.jpg', '/photos/Photo3.jpg', '📸'],
+    peekPreviews: ['/photos/Photo1.jpg', '/photos/Photo2.jpg', '/photos/Photo3.jpg', '/Icons/GalleryIcon.png'],
   },
   {
     id: 'letter',
@@ -13,7 +13,7 @@ export const boxes = [
     tagline: 'Words I mean',
     emoji: '💌',
     color: '#3B82F6',
-    peekPreviews: ['Some people come...', 'You are one of...', '💌', '✨'],
+    peekPreviews: ['Some people come...', 'You are one of...', '/Icons/MessageIcon.png', '✨'],
   },
   {
     id: 'wishes',
@@ -21,7 +21,7 @@ export const boxes = [
     tagline: 'For you, always',
     emoji: '⭐',
     color: '#93C5FD',
-    peekPreviews: ['Endless Joy', 'Dream Big', '⭐', '✨'],
+    peekPreviews: ['Endless Joy', 'Dream Big', '/Icons/WishIcon.png', '✨'],
   },
   {
     id: 'finale',
@@ -29,7 +29,7 @@ export const boxes = [
     tagline: 'A little surprise',
     emoji: '🎁',
     color: '#0F172A',
-    peekPreviews: ['Simply unforgettable', 'Here\'s to you', '🎁', '✦'],
+    peekPreviews: ['Simply unforgettable', 'Here\'s to you', '/Icons/GiftIcon.png', '✦'],
   },
 ]
 

@@ -13,7 +13,7 @@ interface GiftBoxProps {
 }
 
 function PeekPreview({ item }: { item: string }) {
-  if (item.startsWith('/photos/')) {
+  if (item.startsWith('/photos/') || item.startsWith('/Icons/')) {
     return (
       <img
         src={item}
