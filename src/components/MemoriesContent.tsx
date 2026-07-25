@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
-const photoCount = 20
+const photoCount = 19
 
 export function MemoriesContent() {
   const [selectedPhoto, setSelectedPhoto] = useState<number | null>(null)
