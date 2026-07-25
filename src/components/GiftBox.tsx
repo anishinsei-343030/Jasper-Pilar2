@@ -13,12 +13,6 @@ interface GiftBoxProps {
 }
 
 function PeekPreview({ item, layerIndex }: { item: string; layerIndex: number }) {
-  const imgSizes = [
-    'w-52 h-52 sm:w-56 sm:h-56',
-    'w-40 h-40 sm:w-44 sm:h-44',
-    'w-28 h-28 sm:w-32 sm:h-32',
-    'w-12 h-12 sm:w-14 sm:h-14',
-  ]
   const emojiSizes = ['text-lg sm:text-xl', 'text-sm sm:text-base', 'text-xs sm:text-sm', 'text-[8px] sm:text-[10px]']
   const textSizes = ['text-[10px] sm:text-xs', 'text-[8px] sm:text-[10px]', 'text-[6px] sm:text-[8px]', 'text-[4px] sm:text-[6px]']
   if (item.startsWith('/photos/') || item.startsWith('/Icons/')) {
@@ -26,7 +20,7 @@ function PeekPreview({ item, layerIndex }: { item: string; layerIndex: number })
       <img
         src={item}
         alt=""
-        className={`${imgSizes[layerIndex]} rounded object-cover opacity-40`}
+        className="w-full h-full rounded object-cover opacity-40"
       />
     )
   }
