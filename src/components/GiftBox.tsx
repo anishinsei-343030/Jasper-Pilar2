@@ -15,7 +15,7 @@ interface GiftBoxProps {
 function PeekPreview({ item, layerIndex }: { item: string; layerIndex: number }) {
   const opacities = ['opacity-35', 'opacity-65', 'opacity-95', 'opacity-100']
   const emojiSizes = ['text-lg sm:text-xl', 'text-sm sm:text-base', 'text-xs sm:text-sm', 'text-[8px] sm:text-[10px]']
-  const textSizes = ['text-[10px] sm:text-xs', 'text-[8px] sm:text-[10px]', 'text-[6px] sm:text-[8px]', 'text-[4px] sm:text-[6px]']
+  const textSizes = ['text-[14px] sm:text-base', 'text-[11px] sm:text-sm', 'text-[9px] sm:text-xs', 'text-[7px] sm:text-[9px]']
   if (item.startsWith('/photos/') || item.startsWith('/Icons/')) {
     return (
       <img
