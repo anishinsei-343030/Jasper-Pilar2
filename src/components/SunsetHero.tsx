@@ -11,8 +11,8 @@ export function SunsetHero() {
         transition={{ duration: 1.2, ease: 'easeOut' }}
         className="mb-6"
       >
-        <div className="w-28 h-28 mx-auto mb-6 rounded-full bg-gradient-to-br from-[#1D4ED8] to-[#93C5FD] p-[4px] shadow-lg glow-blue">
-          <div className="w-full h-full rounded-full overflow-hidden">
+        <div className="spinner mx-auto mb-6">
+          <div className="spinner1">
             <img
               src="/photos/MainProfile.jpg"
               alt="Angelyn"
