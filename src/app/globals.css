@@ -177,9 +177,7 @@ h1, h2, h3, h4, h5, h6 {
 .peek {
   position: absolute;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.2);
-  border-top: 2px solid rgba(255, 255, 255, 0.4);
-  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: 10% 13% 42% 0%/10% 12% 75% 0%;
   box-shadow: rgba(30, 58, 138, 0.15) -7px 7px 29px 0px;
   transform-origin: bottom left;
@@ -200,27 +198,23 @@ h1, h2, h3, h4, h5, h6 {
 .peek-1 {
   width: 70%;
   height: 70%;
-  padding: 10px;
 }
 
 .peek-2 {
   width: 50%;
   height: 50%;
-  padding: 8px;
   transition-delay: 0.1s;
 }
 
 .peek-3 {
   width: 30%;
   height: 30%;
-  padding: 6px;
   transition-delay: 0.2s;
 }
 
 .peek-4 {
   width: 10%;
   height: 10%;
-  padding: 4px;
   transition-delay: 0.3s;
 }
 
