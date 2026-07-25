@@ -21,7 +21,7 @@ export function MusicToggle() {
   return (
     <div className="fixed bottom-6 right-6 z-50 flex items-center gap-2">
       <motion.button
-        className="w-12 h-12 rounded-full glass flex items-center justify-center text-[#2d1b00] hover:bg-white/40 transition-colors"
+        className="w-12 h-12 rounded-full glass flex items-center justify-center text-[#0F172A] hover:bg-white/40 transition-colors"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={handleToggle}
@@ -38,7 +38,7 @@ export function MusicToggle() {
         )}
       </motion.button>
       <motion.button
-        className="w-10 h-10 rounded-full glass flex items-center justify-center text-[#2d1b00] hover:bg-white/40 transition-colors"
+        className="w-10 h-10 rounded-full glass flex items-center justify-center text-[#0F172A] hover:bg-white/40 transition-colors"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={skip}

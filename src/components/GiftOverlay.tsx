@@ -40,7 +40,7 @@ export function GiftOverlay({ isOpen, onClose, title, color, children }: GiftOve
               <h2 className="text-2xl font-heading" style={{ color }}>{title}</h2>
               <button
                 onClick={onClose}
-                className="w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center text-[#2d1b00] transition-colors"
+                className="w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center text-[#0F172A] transition-colors"
               >
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M18 6L6 18M6 6l12 12" />

@@ -33,8 +33,8 @@ export function GiftBox({ label, tagline, emoji, color, index, onClick }: GiftBo
         />
 
         <div className="text-center">
-          <h3 className="text-xl font-heading text-[#2d1b00] mb-1">{label}</h3>
-          <p className="text-xs font-serif text-[#8b5a2b]/70">{tagline}</p>
+          <h3 className="text-xl font-heading text-[#0F172A] mb-1">{label}</h3>
+          <p className="text-xs font-serif text-[#475569]/70">{tagline}</p>
         </div>
 
         <div

@@ -19,8 +19,8 @@ export function WishesContent() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: i * 0.1 }}
         >
-          <h3 className="text-lg font-heading text-[#2d1b00] mb-2">{wish.title}</h3>
-          <p className="font-serif text-[#8b5a2b] text-sm leading-relaxed">{wish.text}</p>
+          <h3 className="text-lg font-heading text-[#0F172A] mb-2">{wish.title}</h3>
+          <p className="font-serif text-[#475569] text-sm leading-relaxed">{wish.text}</p>
         </motion.div>
       ))}
     </motion.div>

@@ -21,14 +21,14 @@ export function FinaleContent() {
         angle: 60,
         spread: 55,
         origin: { x: 0, y: 0.7 },
-        colors: ['#ff6b35', '#ff8fa3', '#ffd700', '#d4a373'],
+        colors: ['#1D4ED8', '#3B82F6', '#93C5FD', '#0F172A'],
       })
       confetti({
         particleCount: 3,
         angle: 120,
         spread: 55,
         origin: { x: 1, y: 0.7 },
-        colors: ['#ff6b35', '#ff8fa3', '#ffd700', '#d4a373'],
+        colors: ['#1D4ED8', '#3B82F6', '#93C5FD', '#0F172A'],
       })
 
       if (Date.now() < end) {
@@ -54,7 +54,7 @@ export function FinaleContent() {
       </motion.div>
 
       <motion.h3
-        className="text-2xl sm:text-3xl font-heading text-[#2d1b00]"
+        className="text-2xl sm:text-3xl font-heading text-[#0F172A]"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}
@@ -63,7 +63,7 @@ export function FinaleContent() {
       </motion.h3>
 
       <motion.p
-        className="font-serif text-[#8b5a2b] text-lg"
+        className="font-serif text-[#475569] text-lg"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.8 }}
@@ -72,7 +72,7 @@ export function FinaleContent() {
       </motion.p>
 
       <motion.div
-        className="mt-8 w-16 h-[2px] rounded-full bg-gradient-to-r from-transparent via-[#d4a373] to-transparent"
+        className="mt-8 w-16 h-[2px] rounded-full bg-gradient-to-r from-transparent via-[#3B82F6] to-transparent"
         initial={{ scaleX: 0 }}
         animate={{ scaleX: 1 }}
         transition={{ delay: 1.2 }}

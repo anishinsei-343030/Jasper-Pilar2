@@ -17,9 +17,9 @@ export function FloatingEmbers({ count = 20 }) {
               bottom: `${Math.random() * 30}%`,
               width: `${size}px`,
               height: `${size}px`,
-              background: i % 3 === 0 ? '#ff6b35' : i % 3 === 1 ? '#ff8fa3' : '#ffd700',
+              background: i % 3 === 0 ? '#1D4ED8' : i % 3 === 1 ? '#3B82F6' : '#93C5FD',
               opacity: 0,
-              animation: `emberFloat ${duration}s ease-in-out ${delay}s infinite`,
+              animation: `sparkleFloat ${duration}s ease-in-out ${delay}s infinite`,
             }}
           />
         )

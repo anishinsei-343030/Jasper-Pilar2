@@ -39,7 +39,7 @@ export function LetterContent() {
             {letterContent.split('\n\n').map((paragraph, i) => (
               <motion.p
                 key={i}
-                className="font-serif text-[#2d1b00] leading-relaxed mb-4 last:mb-0"
+                className="font-serif text-[#0F172A] leading-relaxed mb-4 last:mb-0"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.2 }}

@@ -4,28 +4,28 @@ export const boxes = [
     label: 'Precious Moments',
     tagline: 'Memories we carry',
     emoji: '📸',
-    color: '#ff6b35',
+    color: '#1D4ED8',
   },
   {
     id: 'letter',
     label: 'From the Heart',
     tagline: 'Words I mean',
     emoji: '💌',
-    color: '#d4a373',
+    color: '#3B82F6',
   },
   {
     id: 'wishes',
     label: 'Starry Dreams',
     tagline: 'For you, always',
     emoji: '⭐',
-    color: '#ff8fa3',
+    color: '#93C5FD',
   },
   {
     id: 'finale',
     label: 'One More Thing',
     tagline: 'A little surprise',
     emoji: '🎁',
-    color: '#c73e1d',
+    color: '#0F172A',
   },
 ]
 
