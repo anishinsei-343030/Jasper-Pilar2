@@ -14,10 +14,10 @@ interface GiftBoxProps {
 
 function PeekPreview({ item, layerIndex }: { item: string; layerIndex: number }) {
   const imgSizes = [
+    'w-20 h-20 sm:w-24 sm:h-24',
     'w-14 h-14 sm:w-16 sm:h-16',
     'w-10 h-10 sm:w-12 sm:h-12',
-    'w-7 h-7 sm:w-8 sm:h-8',
-    'w-4 h-4 sm:w-5 sm:h-5',
+    'w-6 h-6 sm:w-7 sm:h-7',
   ]
   const emojiSizes = ['text-lg sm:text-xl', 'text-sm sm:text-base', 'text-xs sm:text-sm', 'text-[8px] sm:text-[10px]']
   const textSizes = ['text-[10px] sm:text-xs', 'text-[8px] sm:text-[10px]', 'text-[6px] sm:text-[8px]', 'text-[4px] sm:text-[6px]']
