@@ -201,12 +201,12 @@ h1, h2, h3, h4, h5, h6 {
     from var(--angle),
     transparent 0deg,
     #3B82F6 20deg,
-    #93C5FD 50deg,
-    transparent 80deg,
+    #93C5FD 80deg,
+    transparent 120deg,
     transparent 200deg,
     #3B82F6 200deg,
-    #93C5FD 230deg,
-    transparent 260deg
+    #93C5FD 260deg,
+    transparent 300deg
   );
   animation: rotate 8s linear infinite;
 }
