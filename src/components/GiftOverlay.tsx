@@ -34,7 +34,7 @@ export function GiftOverlay({ isOpen, onClose, title, color, children }: GiftOve
             initial={{ opacity: 0, scale: 0.9, y: 40 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+            transition={{ duration: 0.35, ease: 'easeOut' }}
           >
             <div className="relative z-10">
               <div className="sticky top-0 z-10 flex items-center justify-between p-6 pb-4 border-b border-white/20">
