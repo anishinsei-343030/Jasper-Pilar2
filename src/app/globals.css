@@ -185,6 +185,23 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
 }
 
+.card-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 12rem;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(90deg,
+    transparent 0%,
+    #3B82F6 25%,
+    #93C5FD 50%,
+    #3B82F6 75%,
+    transparent 100%
+  );
+  animation: spinning82341 6s linear infinite;
+}
+
 .gift-bg {
   position: absolute;
   inset: 0;
