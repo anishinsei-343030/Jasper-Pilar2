@@ -28,7 +28,7 @@ export const boxes = [
     label: 'One More Thing',
     tagline: 'A little surprise',
     emoji: '/Icons/GiftIcon.png',
-    color: '#0F172A',
+    color: '#2563EB',
     peekPreviews: ['/Icons/GiftIcon1.png', '/Icons/GiftIcon2.png', '/Icons/GiftIcon3.png', '/Icons/GiftIcon.png'],
   },
 ]
