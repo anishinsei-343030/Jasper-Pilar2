@@ -4,6 +4,7 @@ import { AudioProvider } from "@/components/AudioProvider";
 import { MusicToggle } from "@/components/MusicToggle";
 import { FloatingEmbers } from "@/components/FloatingEmbers";
 import { FallingTulips } from "@/components/FallingTulips";
+import { FloatingHearts } from "@/components/FloatingHearts";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -44,6 +45,7 @@ export default function RootLayout({
         <AudioProvider>
           <FloatingEmbers count={20} />
           <FallingTulips count={10} />
+          <FloatingHearts count={10} />
           <MusicToggle />
           {children}
         </AudioProvider>
