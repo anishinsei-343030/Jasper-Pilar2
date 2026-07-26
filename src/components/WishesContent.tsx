@@ -11,6 +11,15 @@ export function WishesContent() {
       transition={{ duration: 0.5 }}
       className="space-y-4"
     >
+      <div className="flex flex-col items-center">
+        <motion.div
+          className="w-24 h-24"
+          animate={{ scale: [1, 1.15, 1] }}
+          transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+        >
+          <img src="/Icons/WishIconInside.png" alt="" className="w-full h-full object-contain" />
+        </motion.div>
+      </div>
       {wishesList.map((wish, i) => (
         <motion.div
           key={i}

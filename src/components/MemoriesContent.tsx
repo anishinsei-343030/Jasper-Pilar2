@@ -34,6 +34,15 @@ export function MemoriesContent() {
       transition={{ duration: 0.5 }}
       className="space-y-4"
     >
+      <div className="flex flex-col items-center">
+        <motion.div
+          className="w-24 h-24"
+          animate={{ scale: [1, 1.15, 1] }}
+          transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+        >
+          <img src="/Icons/GalleryIconInside.png" alt="" className="w-full h-full object-contain" />
+        </motion.div>
+      </div>
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
         {Array.from({ length: photoCount }, (_, i) => (
           <motion.button
