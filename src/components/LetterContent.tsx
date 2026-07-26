@@ -37,7 +37,7 @@ export function LetterContent() {
         >
           <div className="relative overflow-hidden rounded-2xl">
             <div className="card__border" />
-            <div className="absolute inset-[1px] rounded-2xl" style={{ background: 'rgba(255, 255, 255, 0.97)' }} />
+            <div className="absolute inset-[3px] rounded-2xl" style={{ background: 'rgba(255, 255, 255, 0.97)' }} />
             <div className="relative z-10 p-6 sm:p-8">
             {letterContent.split('\n\n').map((paragraph, i) => (
               <motion.p
