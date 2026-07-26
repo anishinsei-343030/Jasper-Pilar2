@@ -5,6 +5,7 @@ import { MusicToggle } from "@/components/MusicToggle";
 import { FloatingEmbers } from "@/components/FloatingEmbers";
 import { FallingTulips } from "@/components/FallingTulips";
 import { FloatingHearts } from "@/components/FloatingHearts";
+import { WelcomeOverlay } from "@/components/WelcomeOverlay";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -42,6 +43,7 @@ export default function RootLayout({
       className={`${playfair.variable} ${inter.variable} ${greatVibes.variable}`}
     >
       <body className="overflow-x-hidden">
+        <WelcomeOverlay />
         <AudioProvider>
           <FloatingEmbers count={20} />
           <FallingTulips count={10} />
