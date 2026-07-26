@@ -5,7 +5,6 @@ import { MusicToggle } from "@/components/MusicToggle";
 import { FloatingEmbers } from "@/components/FloatingEmbers";
 import { FallingTulips } from "@/components/FallingTulips";
 import { FloatingHearts } from "@/components/FloatingHearts";
-import { FloatingButterfly } from "@/components/FloatingButterfly";
 import { WelcomeOverlay } from "@/components/WelcomeOverlay";
 import "./globals.css";
 
@@ -49,7 +48,6 @@ export default function RootLayout({
           <FloatingEmbers count={20} />
           <FallingTulips count={10} />
           <FloatingHearts count={10} />
-          <FloatingButterfly />
           <MusicToggle />
           {children}
         </AudioProvider>

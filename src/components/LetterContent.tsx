@@ -14,6 +14,15 @@ export function LetterContent() {
         <div className="card__border" />
         <div className="absolute inset-[2px] rounded-2xl" style={{ background: 'rgba(255, 255, 255, 0.97)' }} />
         <div className="relative z-10 p-6 sm:p-8">
+          <div className="flex flex-col items-center mb-6">
+            <motion.div
+              className="w-24 h-24"
+              animate={{ scale: [1, 1.15, 1] }}
+              transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+            >
+              <img src="/Icons/MessageIconInside.png" alt="" className="w-full h-full object-contain" />
+            </motion.div>
+          </div>
           <div className="prose prose-sm max-w-none">
             {letterContent.split('\n\n').map((paragraph, i) => (
               <motion.p
