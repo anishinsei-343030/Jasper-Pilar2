@@ -1,12 +1,31 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const photoCount = 19
 
 export function MemoriesContent() {
   const [selectedPhoto, setSelectedPhoto] = useState<number | null>(null)
+
+  const goToPrev = useCallback(() => {
+    setSelectedPhoto(p => p === 1 ? photoCount : p! - 1)
+  }, [])
+
+  const goToNext = useCallback(() => {
+    setSelectedPhoto(p => p === photoCount ? 1 : p! + 1)
+  }, [])
+
+  useEffect(() => {
+    if (selectedPhoto === null) return
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowLeft') goToPrev()
+      else if (e.key === 'ArrowRight') goToNext()
+      else if (e.key === 'Escape') setSelectedPhoto(null)
+    }
+    window.addEventListener('keydown', handleKey)
+    return () => window.removeEventListener('keydown', handleKey)
+  }, [selectedPhoto, goToPrev, goToNext])
 
   return (
     <motion.div
@@ -39,22 +58,44 @@ export function MemoriesContent() {
       <AnimatePresence>
         {selectedPhoto !== null && (
           <motion.div
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setSelectedPhoto(null)}
           >
+            <button
+              onClick={(e) => { e.stopPropagation(); goToPrev() }}
+              className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/20 hover:bg-white/40 flex items-center justify-center text-white text-xl transition-colors z-10"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
+            </button>
+
             <motion.img
               key={selectedPhoto}
               src={`/photos/Photo${selectedPhoto}.jpg`}
               alt={`Photo ${selectedPhoto}`}
-              className="max-w-full max-h-[85vh] rounded-2xl object-contain"
+              className="max-w-full max-h-[85vh] rounded-2xl object-contain px-16"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.8 }}
               transition={{ type: 'spring', damping: 20 }}
             />
+
+            <button
+              onClick={(e) => { e.stopPropagation(); goToNext() }}
+              className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/20 hover:bg-white/40 flex items-center justify-center text-white text-xl transition-colors z-10"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </button>
+
+            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/50 text-sm font-serif">
+              {selectedPhoto} / {photoCount}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
