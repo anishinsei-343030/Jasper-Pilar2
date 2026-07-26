@@ -19,16 +19,19 @@ export function MemoriesContent() {
         {Array.from({ length: photoCount }, (_, i) => (
           <motion.button
             key={i}
-            className="aspect-square rounded-xl overflow-hidden border border-white/20 hover:border-white/40 transition-colors"
+            className="relative aspect-square rounded-xl overflow-hidden"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => setSelectedPhoto(i + 1)}
           >
-            <img
-              src={`/photos/Photo${i + 1}.jpg`}
-              alt={`Photo ${i + 1}`}
-              className="w-full h-full object-cover"
-            />
+            <div className="card__border" />
+            <div className="absolute inset-[2px] rounded-xl overflow-hidden">
+              <img
+                src={`/photos/Photo${i + 1}.jpg`}
+                alt={`Photo ${i + 1}`}
+                className="w-full h-full object-cover"
+              />
+            </div>
           </motion.button>
         ))}
       </div>
