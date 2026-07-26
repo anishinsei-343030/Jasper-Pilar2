@@ -185,44 +185,30 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
 }
 
-.card__border {
-  overflow: hidden;
-  pointer-events: none;
-  position: absolute;
-  z-index: -10;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: calc(100% + 2px);
-  height: calc(100% + 2px);
-  border-radius: 1rem;
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
 }
 
-.card__border::before {
-  content: "";
-  pointer-events: none;
+.card__border {
   position: absolute;
-  z-index: 200;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%), rotate(0deg);
-  transform-origin: left;
-  width: 200%;
-  height: 10rem;
-  background-image: linear-gradient(
-    0deg,
-    hsla(0, 0%, 100%, 0) 0%,
-    hsl(189, 100%, 50%) 40%,
-    hsl(189, 100%, 50%) 60%,
-    hsla(0, 0%, 40%, 0) 100%
+  inset: 0;
+  z-index: -10;
+  pointer-events: none;
+  border-radius: inherit;
+  background: conic-gradient(
+    from var(--angle),
+    transparent 0deg,
+    #3B82F6 30deg,
+    #93C5FD 45deg,
+    transparent 60deg
   );
-  animation: rotate 8s linear infinite;
+  animation: rotate 4s linear infinite;
 }
 
 @keyframes rotate {
-  to {
-    transform: rotate(360deg);
-  }
+  to { --angle: 360deg; }
 }
 
 .gift-bg {
