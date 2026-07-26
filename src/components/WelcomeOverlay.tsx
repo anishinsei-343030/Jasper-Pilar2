@@ -6,29 +6,35 @@ import confetti from 'canvas-confetti'
 
 export function WelcomeOverlay() {
   const [dismissed, setDismissed] = useState(false)
+  const [phase, setPhase] = useState<'welcome' | 'letsgo'>('welcome')
 
   const handleEnter = () => {
-    const duration = 2000
-    const end = Date.now() + duration
-    const frame = () => {
-      confetti({
-        particleCount: 4,
-        angle: 60,
-        spread: 55,
-        origin: { x: 0, y: 0.7 },
-        colors: ['#1D4ED8', '#3B82F6', '#93C5FD', '#BFDBFE'],
-      })
-      confetti({
-        particleCount: 4,
-        angle: 120,
-        spread: 55,
-        origin: { x: 1, y: 0.7 },
-        colors: ['#1D4ED8', '#3B82F6', '#93C5FD', '#BFDBFE'],
-      })
-      if (Date.now() < end) requestAnimationFrame(frame)
+    if (phase === 'welcome') {
+      setPhase('letsgo')
+      setTimeout(() => {
+        const duration = 2000
+        const end = Date.now() + duration
+        const frame = () => {
+          confetti({
+            particleCount: 4,
+            angle: 60,
+            spread: 55,
+            origin: { x: 0, y: 0.7 },
+            colors: ['#1D4ED8', '#3B82F6', '#93C5FD', '#BFDBFE'],
+          })
+          confetti({
+            particleCount: 4,
+            angle: 120,
+            spread: 55,
+            origin: { x: 1, y: 0.7 },
+            colors: ['#1D4ED8', '#3B82F6', '#93C5FD', '#BFDBFE'],
+          })
+          if (Date.now() < end) requestAnimationFrame(frame)
+        }
+        frame()
+        setTimeout(() => setDismissed(true), 800)
+      }, 1500)
     }
-    frame()
-    setTimeout(() => setDismissed(true), 800)
   }
 
   return (
@@ -72,16 +78,16 @@ export function WelcomeOverlay() {
               style={{
                 WebkitBoxReflect: 'below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4))',
               } as React.CSSProperties}
-              className="px-10 py-3 bg-gradient-to-r from-[#1D4ED8] to-[#3B82F6] rounded-full shadow-xl group-hover:shadow-2xl group-hover:shadow-[#1D4ED8] shadow-[#1D4ED8] uppercase font-serif tracking-[0.2em] relative overflow-hidden group text-transparent cursor-pointer z-10 after:absolute after:rounded-full after:bg-[#BFDBFE] after:h-[85%] after:w-[95%] after:left-1/2 after:top-1/2 after:-translate-x-1/2 after:-translate-y-1/2 hover:saturate-[1.15] active:saturate-[1.4]"
+              className="px-16 py-5 bg-gradient-to-r from-[#1D4ED8] to-[#3B82F6] rounded-full shadow-xl group-hover:shadow-2xl group-hover:shadow-[#1D4ED8] shadow-[#1D4ED8] uppercase font-serif tracking-[0.2em] relative overflow-hidden group text-transparent cursor-pointer z-10 after:absolute after:rounded-full after:bg-[#BFDBFE] after:h-[85%] after:w-[95%] after:left-1/2 after:top-1/2 after:-translate-x-1/2 after:-translate-y-1/2 hover:saturate-[1.15] active:saturate-[1.4]"
             >
-              <p className="absolute z-40 font-semibold bg-gradient-to-r from-[#1D4ED8] to-[#3B82F6] bg-clip-text text-transparent top-1/2 left-1/2 -translate-x-1/2 group-hover:-translate-y-full h-full w-full transition-all duration-300 -translate-y-[30%] tracking-[0.2em]">
+              <p className={`absolute z-40 font-semibold bg-gradient-to-r from-[#1D4ED8] to-[#3B82F6] bg-clip-text text-transparent top-1/2 left-1/2 -translate-x-1/2 h-full w-full transition-all duration-300 tracking-[0.2em] text-sm ${phase === 'letsgo' ? '-translate-y-full' : '-translate-y-[30%]'} group-hover:-translate-y-full`}>
                 WELCOME
               </p>
-              <p className="absolute z-40 top-1/2 left-1/2 bg-gradient-to-r from-[#0F172A] to-[#1D4ED8] bg-clip-text text-transparent -translate-x-1/2 translate-y-full h-full w-full transition-all duration-300 group-hover:-translate-y-[40%] tracking-[0.2em] font-extrabold">
+              <p className={`absolute z-40 top-1/2 left-1/2 bg-gradient-to-r from-[#0F172A] to-[#1D4ED8] bg-clip-text text-transparent -translate-x-1/2 h-full w-full transition-all duration-300 tracking-[0.2em] font-extrabold text-sm ${phase === 'letsgo' ? '-translate-y-[40%]' : 'translate-y-full'} group-hover:-translate-y-[40%]`}>
                 LET'S GO
               </p>
               <svg
-                className="absolute w-full h-full scale-x-125 rotate-180 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 group-hover:animate-none animate-pulse group-hover:-translate-y-[45%] transition-all duration-300"
+                className={`absolute w-full h-full scale-x-125 rotate-180 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 transition-all duration-300 ${phase === 'letsgo' ? 'animate-none -translate-y-[45%]' : 'animate-pulse'} group-hover:animate-none group-hover:-translate-y-[45%]`}
                 viewBox="0 0 2400 800"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -130,7 +136,7 @@ export function WelcomeOverlay() {
                 </g>
               </svg>
               <svg
-                className="absolute w-full h-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-[30%] group-hover:-translate-y-[33%] group-hover:scale-95 transition-all duration-500 z-40 fill-[#1D4ED8]"
+                className={`absolute w-full h-full top-1/2 left-1/2 -translate-x-1/2 transition-all duration-500 z-40 fill-[#1D4ED8] ${phase === 'letsgo' ? '-translate-y-[33%] scale-95' : '-translate-y-[30%]'} group-hover:-translate-y-[33%] group-hover:scale-95`}
                 viewBox="0 0 1440 320"
                 xmlns="http://www.w3.org/2000/svg"
               >
