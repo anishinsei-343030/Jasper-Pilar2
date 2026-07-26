@@ -292,4 +292,14 @@ h1, h2, h3, h4, h5, h6 {
   .box-shadow {
     box-shadow: var(--box-shadow);
   }
+
+@keyframes floatingButterfly {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-8px) rotate(2deg); }
+  50% { transform: translateY(-3px) rotate(-1deg); }
+  75% { transform: translateY(5px) rotate(1deg); }
+}
+.floating-butterfly {
+  animation: floatingButterfly 4s ease-in-out infinite;
+}
 }
