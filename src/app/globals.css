@@ -200,11 +200,15 @@ h1, h2, h3, h4, h5, h6 {
   background: conic-gradient(
     from var(--angle),
     transparent 0deg,
-    #3B82F6 30deg,
-    #93C5FD 45deg,
-    transparent 60deg
+    #3B82F6 20deg,
+    #93C5FD 50deg,
+    transparent 80deg,
+    transparent 200deg,
+    #3B82F6 200deg,
+    #93C5FD 230deg,
+    transparent 260deg
   );
-  animation: rotate 4s linear infinite;
+  animation: rotate 8s linear infinite;
 }
 
 @keyframes rotate {
