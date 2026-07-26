@@ -35,7 +35,10 @@ export function LetterContent() {
           transition={{ duration: 0.8 }}
           className="prose prose-sm max-w-none"
         >
-          <div className="bg-white/20 rounded-2xl p-6 sm:p-8 border border-white/20">
+          <div className="relative overflow-hidden rounded-2xl">
+            <div className="card__border" />
+            <div className="absolute inset-[1px] rounded-2xl" style={{ background: 'rgba(255, 255, 255, 0.97)' }} />
+            <div className="relative z-10 p-6 sm:p-8">
             {letterContent.split('\n\n').map((paragraph, i) => (
               <motion.p
                 key={i}
@@ -47,6 +50,7 @@ export function LetterContent() {
                 {paragraph}
               </motion.p>
             ))}
+          </div>
           </div>
         </motion.div>
       )}

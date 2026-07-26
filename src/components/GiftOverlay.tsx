@@ -37,7 +37,6 @@ export function GiftOverlay({ isOpen, onClose, title, color, children }: GiftOve
             transition={{ type: 'spring', damping: 25, stiffness: 300 }}
           >
             <div className="card__border" />
-            <div className="absolute inset-[1px] rounded-3xl" style={{ background: 'rgba(255, 255, 255, 0.97)' }} />
             <div className="relative z-10">
               <div className="sticky top-0 z-10 flex items-center justify-between p-6 pb-4 border-b border-white/20">
                 <h2 className="text-2xl font-heading" style={{ color }}>{title}</h2>

@@ -14,13 +14,17 @@ export function WishesContent() {
       {wishesList.map((wish, i) => (
         <motion.div
           key={i}
-          className="bg-white/20 rounded-xl p-5 border border-white/20 hover:bg-white/30 transition-colors"
+          className="relative overflow-hidden rounded-xl"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: i * 0.1 }}
         >
-          <h3 className="text-lg font-heading text-[#0F172A] mb-2">{wish.title}</h3>
-          <p className="font-serif text-[#475569] text-sm leading-relaxed">{wish.text}</p>
+          <div className="card__border" />
+          <div className="absolute inset-[1px] rounded-xl" style={{ background: 'rgba(255, 255, 255, 0.97)' }} />
+          <div className="relative z-10 p-5">
+            <h3 className="text-lg font-heading text-[#0F172A] mb-2">{wish.title}</h3>
+            <p className="font-serif text-[#475569] text-sm leading-relaxed">{wish.text}</p>
+          </div>
         </motion.div>
       ))}
     </motion.div>
