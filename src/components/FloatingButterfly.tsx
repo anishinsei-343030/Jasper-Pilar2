@@ -2,11 +2,15 @@
 
 import { useEffect } from 'react'
 import { motion, useAnimation } from 'framer-motion'
+import { useStore } from '@/store/useStore'
 
 export function FloatingButterfly() {
+  const welcomeDismissed = useStore((s) => s.welcomeDismissed)
   const controls = useAnimation()
 
   useEffect(() => {
+    if (!welcomeDismissed) return
+
     controls.set({ opacity: 0, x: 100, y: 0, scale: 0.8 })
 
     const t1 = setTimeout(() => {
@@ -29,7 +33,7 @@ export function FloatingButterfly() {
     }, 5000)
 
     return () => { clearTimeout(t1); clearTimeout(t2) }
-  }, [controls])
+  }, [welcomeDismissed, controls])
 
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden z-10">

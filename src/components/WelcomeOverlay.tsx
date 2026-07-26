@@ -3,8 +3,10 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import confetti from 'canvas-confetti'
+import { useStore } from '@/store/useStore'
 
 export function WelcomeOverlay() {
+  const dismissWelcome = useStore((s) => s.dismissWelcome)
   const [dismissed, setDismissed] = useState(false)
   const [phase, setPhase] = useState<'welcome' | 'letsgo'>('welcome')
 
@@ -32,7 +34,7 @@ export function WelcomeOverlay() {
           if (Date.now() < end) requestAnimationFrame(frame)
         }
         frame()
-        setTimeout(() => setDismissed(true), 800)
+        setTimeout(() => { setDismissed(true); dismissWelcome() }, 800)
       }, 1500)
     }
   }

@@ -34,6 +34,8 @@ interface Store {
   nextTrack: () => void
   shuffleOrder: number[]
   shufflePos: number
+  welcomeDismissed: boolean
+  dismissWelcome: () => void
 }
 
 export const useStore = create<Store>((set) => ({
@@ -55,4 +57,6 @@ export const useStore = create<Store>((set) => ({
     }),
   shuffleOrder: initialOrder,
   shufflePos: 0,
+  welcomeDismissed: false,
+  dismissWelcome: () => set({ welcomeDismissed: true }),
 }))
