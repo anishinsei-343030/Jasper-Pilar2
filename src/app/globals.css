@@ -185,21 +185,49 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
 }
 
-.card-glow {
+.card__border {
+  overflow: hidden;
+  pointer-events: none;
   position: absolute;
+  z-index: -10;
   top: 50%;
   left: 50%;
-  width: 200%;
-  height: 12rem;
   transform: translate(-50%, -50%);
-  background: linear-gradient(90deg,
-    transparent 0%,
-    #3B82F6 25%,
-    #93C5FD 50%,
-    #3B82F6 75%,
-    transparent 100%
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  background-image: linear-gradient(
+    0deg,
+    hsl(0, 0%, 100%) -50%,
+    hsl(0, 0%, 40%) 100%
   );
-  animation: spinning82341 6s linear infinite;
+  border-radius: 1rem;
+}
+
+.card__border::before {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  z-index: 200;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%), rotate(0deg);
+  transform-origin: left;
+  width: 200%;
+  height: 10rem;
+  background-image: linear-gradient(
+    0deg,
+    hsla(0, 0%, 100%, 0) 0%,
+    hsl(189, 100%, 50%) 40%,
+    hsl(189, 100%, 50%) 60%,
+    hsla(0, 0%, 40%, 0) 100%
+  );
+  animation: rotate 8s linear infinite;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .gift-bg {
