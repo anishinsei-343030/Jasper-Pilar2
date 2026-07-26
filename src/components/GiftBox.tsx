@@ -47,7 +47,7 @@ export function GiftBox({ label, tagline, emoji, color, index, peekPreviews, onC
       onClick={onClick}
     >
       <div className="card__border" />
-      <div className="absolute inset-[3px] rounded-2xl overflow-hidden box-shadow" style={{ zIndex: 1, background: 'rgba(255, 255, 255, 0.97)' }}>
+      <div className="absolute inset-[2px] rounded-2xl overflow-hidden box-shadow" style={{ zIndex: 1, background: 'rgba(255, 255, 255, 0.97)' }}>
         <div
           className="gift-bg"
           style={{

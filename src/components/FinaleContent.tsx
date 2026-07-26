@@ -46,7 +46,7 @@ export function FinaleContent() {
       transition={{ duration: 0.8 }}
     >
       <div className="card__border" />
-      <div className="absolute inset-[3px] rounded-2xl" style={{ background: 'rgba(255, 255, 255, 0.97)' }} />
+      <div className="absolute inset-[2px] rounded-2xl" style={{ background: 'rgba(255, 255, 255, 0.97)' }} />
       <div className="relative z-10 flex flex-col items-center justify-center py-12 text-center space-y-6">
         <motion.div
           className="text-7xl"
