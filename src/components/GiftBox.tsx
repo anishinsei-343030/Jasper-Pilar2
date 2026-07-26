@@ -68,7 +68,7 @@ export function GiftBox({ label, tagline, emoji, color, index, peekPreviews, onC
         </div>
         <div className="relative z-10 flex flex-col items-center h-full p-6">
           <div className="flex-1 flex items-center justify-center w-full">
-            <div className="transition-all duration-500 ease-out group-hover:-translate-y-28 group-hover:scale-110">
+            <div className="transition-all duration-500 ease-in group-hover:-translate-y-40 group-hover:scale-110">
               {emoji.startsWith('/Icons/') ? (
                 <img src={emoji} alt="" className="w-16 h-16 object-contain mx-auto" />
               ) : (
