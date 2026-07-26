@@ -48,13 +48,13 @@ export function FinaleContent() {
       <div className="card__border" />
       <div className="absolute inset-[2px] rounded-2xl" style={{ background: 'rgba(255, 255, 255, 0.97)' }} />
       <div className="relative z-10 flex flex-col items-center justify-center py-12 text-center space-y-6">
-        <motion.div
-          className="text-7xl"
-          animate={{ scale: [1, 1.15, 1] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
-        >
-          🎁
-        </motion.div>
+      <motion.div
+        className="w-24 h-24"
+        animate={{ scale: [1, 1.15, 1] }}
+        transition={{ duration: 1.5, repeat: Infinity }}
+      >
+        <img src="/Icons/GiftIconInside.png" alt="" className="w-full h-full object-contain" />
+      </motion.div>
 
         <motion.h3
           className="text-2xl sm:text-3xl font-heading text-[#0F172A]"

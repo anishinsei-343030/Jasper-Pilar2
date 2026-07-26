@@ -21,11 +21,11 @@ export function LetterContent() {
       {!revealed ? (
         <div className="flex items-center justify-center py-16">
           <motion.div
-            className="text-6xl"
+            className="w-20 h-20"
             animate={{ rotate: [0, 10, -10, 0] }}
             transition={{ duration: 1.5, repeat: Infinity }}
           >
-            💌
+            <img src="/Icons/MessageIconInside.png" alt="" className="w-full h-full object-contain" />
           </motion.div>
         </div>
       ) : (
