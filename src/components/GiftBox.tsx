@@ -39,7 +39,6 @@ export function GiftBox({ label, tagline, emoji, color, index, peekPreviews, onC
   return (
     <motion.button
       className="gift-card relative w-full aspect-[4/5] cursor-pointer group overflow-hidden rounded-2xl"
-      style={{ backgroundColor: '#0F172A' }}
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.4 + index * 0.15 }}
@@ -50,21 +49,7 @@ export function GiftBox({ label, tagline, emoji, color, index, peekPreviews, onC
       <div className="absolute inset-0 overflow-hidden rounded-2xl pointer-events-none">
         <div className="card-glow" />
       </div>
-      <div className="absolute inset-[1px] rounded-2xl overflow-hidden" style={{ zIndex: 1 }}>
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundColor: '#0F172A',
-            backgroundImage: `
-              radial-gradient(at 88% 40%, #0F172A 0px, transparent 85%),
-              radial-gradient(at 49% 30%, #0F172A 0px, transparent 85%),
-              radial-gradient(at 14% 26%, #0F172A 0px, transparent 85%),
-              radial-gradient(at 0% 64%, ${color}33 0px, transparent 85%),
-              radial-gradient(at 41% 94%, ${color}55 0px, transparent 85%),
-              radial-gradient(at 100% 99%, ${color}22 0px, transparent 85%)
-            `,
-          }}
-        />
+      <div className="absolute inset-[1px] rounded-2xl overflow-hidden glass box-shadow" style={{ zIndex: 1 }}>
         <div
           className="gift-bg"
           style={{
@@ -98,8 +83,8 @@ export function GiftBox({ label, tagline, emoji, color, index, peekPreviews, onC
           />
 
           <div className="text-center">
-            <h3 className="text-xl font-heading text-white mb-1">{label}</h3>
-            <p className="text-xs font-serif text-[#94A3B8]/80">{tagline}</p>
+            <h3 className="text-xl font-heading text-[#0F172A] mb-1">{label}</h3>
+            <p className="text-xs font-serif text-[#475569]/70">{tagline}</p>
           </div>
         </div>
       </div>
