@@ -66,20 +66,16 @@ export function GiftBox({ label, tagline, emoji, color, index, peekPreviews, onC
         <div className="peek peek-4" style={{ borderTopColor: `${color}22` }}>
           <PeekPreview item={peekPreviews[3]} layerIndex={3} />
         </div>
-        <div className="relative z-10 flex flex-col items-center justify-between h-full p-6">
-          <div className="text-5xl mb-2 group-hover:scale-110 transition-transform duration-300">
-            {emoji.startsWith('/Icons/') ? (
-              <img src={emoji} alt="" className="w-16 h-16 object-contain mx-auto" />
-            ) : (
-              emoji
-            )}
+        <div className="relative z-10 flex flex-col items-center h-full p-6">
+          <div className="flex-1 flex items-center justify-center w-full">
+            <div className="transition-all duration-500 ease-out group-hover:-translate-y-28 group-hover:scale-110">
+              {emoji.startsWith('/Icons/') ? (
+                <img src={emoji} alt="" className="w-16 h-16 object-contain mx-auto" />
+              ) : (
+                <span className="text-5xl">{emoji}</span>
+              )}
+            </div>
           </div>
-
-          <div
-            className="w-4/5 h-[2px] rounded-full"
-            style={{ background: `linear-gradient(90deg, transparent, ${color}, transparent)` }}
-          />
-
           <div className="text-center">
             <h3 className="text-xl font-heading text-[#0F172A] mb-1">{label}</h3>
             <p className="text-xs font-serif text-[#475569]/70">{tagline}</p>
