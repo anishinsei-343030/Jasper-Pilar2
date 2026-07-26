@@ -30,26 +30,30 @@ export function GiftOverlay({ isOpen, onClose, title, color, children }: GiftOve
           />
 
           <motion.div
-            className="relative w-full max-w-2xl max-h-[85vh] overflow-y-auto rounded-3xl glass border border-white/30 shadow-2xl"
+            className="relative w-full max-w-2xl max-h-[85vh] overflow-y-auto rounded-3xl shadow-2xl"
             initial={{ opacity: 0, scale: 0.9, y: 40 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ type: 'spring', damping: 25, stiffness: 300 }}
           >
-            <div className="sticky top-0 z-10 flex items-center justify-between p-6 pb-4 border-b border-white/20">
-              <h2 className="text-2xl font-heading" style={{ color }}>{title}</h2>
-              <button
-                onClick={onClose}
-                className="w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center text-[#0F172A] transition-colors"
-              >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M18 6L6 18M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
+            <div className="card__border" />
+            <div className="absolute inset-[1px] rounded-3xl" style={{ background: 'rgba(255, 255, 255, 0.97)' }} />
+            <div className="relative z-10">
+              <div className="sticky top-0 z-10 flex items-center justify-between p-6 pb-4 border-b border-white/20">
+                <h2 className="text-2xl font-heading" style={{ color }}>{title}</h2>
+                <button
+                  onClick={onClose}
+                  className="w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center text-[#0F172A] transition-colors"
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M18 6L6 18M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
 
-            <div className="p-6">
-              {children}
+              <div className="p-6">
+                {children}
+              </div>
             </div>
           </motion.div>
         </motion.div>
