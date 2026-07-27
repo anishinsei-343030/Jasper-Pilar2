@@ -199,13 +199,13 @@ h1, h2, h3, h4, h5, h6 {
   inset: -200%;
   background: conic-gradient(
     transparent 0deg,
-    #3B82F6 15deg,
-    #93C5FD 105deg,
-    transparent 140deg,
-    transparent 190deg,
-    #3B82F6 190deg,
-    #93C5FD 280deg,
-    transparent 315deg
+    #3B82F6 30deg,
+    #93C5FD 90deg,
+    transparent 120deg,
+    transparent 180deg,
+    #3B82F6 210deg,
+    #93C5FD 270deg,
+    transparent 300deg
   );
   animation: rotate 8s linear infinite;
 }
