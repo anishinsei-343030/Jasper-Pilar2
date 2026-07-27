@@ -185,20 +185,20 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
 }
 
-@property --angle {
-  syntax: '<angle>';
-  initial-value: 0deg;
-  inherits: false;
-}
-
 .card__border {
   position: absolute;
   inset: 0;
   z-index: -10;
   pointer-events: none;
   border-radius: inherit;
+  overflow: hidden;
+}
+
+.card__border::before {
+  content: '';
+  position: absolute;
+  inset: -200%;
   background: conic-gradient(
-    from var(--angle),
     transparent 0deg,
     #3B82F6 20deg,
     #93C5FD 80deg,
@@ -212,7 +212,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes rotate {
-  to { --angle: 360deg; }
+  to { transform: rotate(360deg); }
 }
 
 .gift-bg {
