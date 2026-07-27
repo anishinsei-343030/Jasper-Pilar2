@@ -17,7 +17,7 @@ export function LetterContent() {
               animate={{ scale: [1, 1.15, 1] }}
               transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
             >
-              <img src="/Icons/MessageIconInside.png" alt="" className="w-full h-full object-contain" />
+              <img src="./Icons/MessageIconInside.png" alt="" className="w-full h-full object-contain" />
             </motion.div>
           </div>
           <div className="prose prose-sm max-w-none">

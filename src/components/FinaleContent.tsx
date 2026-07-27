@@ -48,7 +48,7 @@ export function FinaleContent() {
         animate={{ scale: [1, 1.15, 1] }}
         transition={{ duration: 1.5, repeat: Infinity }}
       >
-        <img src="/Icons/GiftIconInside.png" alt="" className="w-full h-full object-contain" />
+        <img src="./Icons/GiftIconInside.png" alt="" className="w-full h-full object-contain" />
       </motion.div>
 
         <motion.h3

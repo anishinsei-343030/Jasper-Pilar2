@@ -12,7 +12,7 @@ export function WishesContent() {
           animate={{ scale: [1, 1.15, 1] }}
           transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
         >
-          <img src="/Icons/WishIconInside.png" alt="" className="w-full h-full object-contain" />
+          <img src="./Icons/WishIconInside.png" alt="" className="w-full h-full object-contain" />
         </motion.div>
       </div>
       {wishesList.map((wish, i) => (

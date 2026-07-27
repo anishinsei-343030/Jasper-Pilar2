@@ -3,10 +3,10 @@
 import { create } from 'zustand'
 
 export const tracks = [
-  { src: '/music/Track1.mp3', label: 'Track 1' },
-  { src: '/music/Track2.mp3', label: 'Track 2' },
-  { src: '/music/Track3.mp3', label: 'Track 3' },
-  { src: '/music/Track4.mp3', label: 'Track 4' },
+  { src: './music/Track1.mp3', label: 'Track 1' },
+  { src: './music/Track2.mp3', label: 'Track 2' },
+  { src: './music/Track3.mp3', label: 'Track 3' },
+  { src: './music/Track4.mp3', label: 'Track 4' },
 ]
 
 function shuffleArray(len: number, avoid?: number): number[] {

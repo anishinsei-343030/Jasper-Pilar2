@@ -16,7 +16,7 @@ function PeekPreview({ item, layerIndex }: { item: string; layerIndex: number })
   const opacities = ['opacity-35', 'opacity-65', 'opacity-95', 'opacity-100']
   const emojiSizes = ['text-lg sm:text-xl', 'text-sm sm:text-base', 'text-xs sm:text-sm', 'text-[8px] sm:text-[10px]']
   const textSizes = ['text-[14px] sm:text-base', 'text-[11px] sm:text-sm', 'text-[9px] sm:text-xs', 'text-[7px] sm:text-[9px]']
-  if (item.startsWith('/photos/') || item.startsWith('/Icons/')) {
+  if (item.startsWith('./photos/') || item.startsWith('./Icons/')) {
     return (
       <img
         src={item}
@@ -69,7 +69,7 @@ export function GiftBox({ label, tagline, emoji, color, index, peekPreviews, onC
         <div className="relative z-10 flex flex-col items-center h-full p-6">
           <div className="flex-1 flex items-center justify-center w-full">
             <div className="transition-all duration-500 [transition-timing-function:cubic-bezier(0.05,0,0.7,1)] group-hover:-translate-y-40 group-hover:scale-110">
-              {emoji.startsWith('/Icons/') ? (
+              {emoji.startsWith('./Icons/') ? (
                 <img src={emoji} alt="" className="w-16 h-16 object-contain mx-auto" />
               ) : (
                 <span className="text-5xl">{emoji}</span>

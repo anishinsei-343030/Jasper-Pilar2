@@ -40,7 +40,7 @@ export function MemoriesContent() {
           animate={{ scale: [1, 1.15, 1] }}
           transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
         >
-          <img src="/Icons/GalleryIconInside.png" alt="" className="w-full h-full object-contain" />
+          <img src="./Icons/GalleryIconInside.png" alt="" className="w-full h-full object-contain" />
         </motion.div>
       </div>
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
@@ -55,7 +55,7 @@ export function MemoriesContent() {
             <div className="card__border" />
             <div className="absolute inset-[2px] rounded-xl overflow-hidden">
               <img
-                src={`/photos/Photo${i + 1}.jpg`}
+                src={`./photos/Photo${i + 1}.jpg`}
                 alt={`Photo ${i + 1}`}
                 className="w-full h-full object-cover"
               />
@@ -84,7 +84,7 @@ export function MemoriesContent() {
 
             <motion.img
               key={selectedPhoto}
-              src={`/photos/Photo${selectedPhoto}.jpg`}
+              src={`./photos/Photo${selectedPhoto}.jpg`}
               alt={`Photo ${selectedPhoto}`}
               className="max-w-full max-h-[85vh] rounded-2xl object-contain px-16"
               initial={{ opacity: 0, scale: 0.8 }}

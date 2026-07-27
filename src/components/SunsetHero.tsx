@@ -14,7 +14,7 @@ export function SunsetHero() {
         <div className="spinner mx-auto mb-6">
           <div className="spinner1">
             <img
-              src="/photos/MainProfile.jpg"
+              src="./photos/MainProfile.jpg"
               alt="Angelyn"
               className="w-full h-full object-cover"
             />
