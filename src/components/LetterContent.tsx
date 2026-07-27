@@ -5,11 +5,8 @@ import { letterContent } from '@/lib/messages'
 
 export function LetterContent() {
   return (
-    <motion.div
+    <div
       className="relative overflow-hidden rounded-2xl"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
     >
       <div className="card__border" />
       <div className="absolute inset-[2px] rounded-2xl" style={{ background: 'rgba(255, 255, 255, 0.97)' }} />
@@ -37,6 +34,6 @@ export function LetterContent() {
           ))}
         </div>
       </div>
-    </motion.div>
+    </div>
   )
 }

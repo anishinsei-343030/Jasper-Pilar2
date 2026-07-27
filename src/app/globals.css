@@ -191,7 +191,6 @@ h1, h2, h3, h4, h5, h6 {
   z-index: -10;
   pointer-events: none;
   border-radius: inherit;
-  overflow: hidden;
 }
 
 .card__border::before {
@@ -200,13 +199,13 @@ h1, h2, h3, h4, h5, h6 {
   inset: -200%;
   background: conic-gradient(
     transparent 0deg,
-    #3B82F6 20deg,
-    #93C5FD 80deg,
-    transparent 120deg,
-    transparent 200deg,
-    #3B82F6 200deg,
-    #93C5FD 260deg,
-    transparent 300deg
+    #3B82F6 15deg,
+    #93C5FD 105deg,
+    transparent 140deg,
+    transparent 190deg,
+    #3B82F6 190deg,
+    #93C5FD 280deg,
+    transparent 315deg
   );
   animation: rotate 8s linear infinite;
 }
