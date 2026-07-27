@@ -39,15 +39,10 @@ export function FinaleContent() {
   }, [])
 
   return (
-    <motion.div
-      className="relative overflow-hidden rounded-2xl"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.8 }}
-    >
+    <div className="relative overflow-hidden rounded-2xl">
       <div className="card__border" />
-      <div className="absolute inset-[2px] rounded-2xl" style={{ background: 'rgba(255, 255, 255, 0.97)' }} />
-      <div className="relative z-10 flex flex-col items-center justify-center py-12 text-center space-y-6">
+      <div className="relative z-10 rounded-2xl bg-white/97 m-[2px]">
+        <div className="flex flex-col items-center justify-center py-12 text-center space-y-6">
       <motion.div
         className="w-24 h-24"
         animate={{ scale: [1, 1.15, 1] }}
@@ -81,6 +76,7 @@ export function FinaleContent() {
           transition={{ delay: 1.2 }}
         />
       </div>
-    </motion.div>
+      </div>
+    </div>
   )
 }

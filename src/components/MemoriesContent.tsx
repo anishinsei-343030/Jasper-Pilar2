@@ -28,12 +28,7 @@ export function MemoriesContent() {
   }, [selectedPhoto, goToPrev, goToNext])
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      className="space-y-4"
-    >
+    <div className="space-y-4">
       <div className="flex flex-col items-center">
         <motion.div
           className="w-24 h-24"
@@ -108,6 +103,6 @@ export function MemoriesContent() {
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.div>
+    </div>
   )
 }

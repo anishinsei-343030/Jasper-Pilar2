@@ -5,12 +5,7 @@ import { wishesList } from '@/lib/messages'
 
 export function WishesContent() {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      className="space-y-4"
-    >
+    <div className="space-y-4">
       <div className="flex flex-col items-center">
         <motion.div
           className="w-24 h-24"
@@ -29,13 +24,12 @@ export function WishesContent() {
           transition={{ delay: i * 0.1 }}
         >
           <div className="card__border" />
-          <div className="absolute inset-[2px] rounded-xl" style={{ background: 'rgba(255, 255, 255, 0.97)' }} />
-          <div className="relative z-10 p-5">
+          <div className="relative z-10 rounded-xl bg-white/97 m-[2px] p-5">
             <h3 className="text-lg font-heading text-[#0F172A] mb-2">{wish.title}</h3>
             <p className="font-serif text-[#475569] text-sm leading-relaxed">{wish.text}</p>
           </div>
         </motion.div>
       ))}
-    </motion.div>
+    </div>
   )
 }
