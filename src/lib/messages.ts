@@ -40,18 +40,39 @@ export const heroLines = [
   'For Angelyn M. Toledo',
 ]
 
-export const letterContent = `My dearest Angelyn,
+export const letterContent = `Happy Birthday, Angelyn! 🎉❤️
 
-Some people come into your life and change everything. You are one of those rare souls.
+Today is a special day because it celebrates the wonderful person you are. Happy Birthday, Angelyn! I sincerely pray that God continues to bless you with good health, genuine happiness, wisdom, strength, and countless opportunities. May this new chapter of your life be filled with peace, love, and beautiful moments that you will always cherish.
 
-I wanted to create something that captures even a fraction of how special you are. Not just today, but every day. Your warmth, your strength, your beautiful heart — these are the things that make the world a brighter place.
+From the day I met you, I never imagined that someone could leave such a meaningful impression on my life. You may not know it, but meeting you became one of those moments I quietly treasure. Your kindness, your smile, and the way you carry yourself have inspired me in ways I cannot fully explain. Every conversation, every laugh, and every memory we shared became something I genuinely appreciate.
 
-Thank you for being you. Unapologetically, beautifully, wonderfully you.
+Life is a journey filled with unexpected turns. There will be days of happiness and days of sadness, moments of victory and moments of defeat. There will be times when you feel tired, discouraged, or uncertain about what lies ahead. But I hope you will always remember that every trial has a purpose, every delay has a reason, and every challenge is preparing you for something greater than you can imagine.
 
-This little space is for you — a collection of memories, dreams, and words from the heart.
+Never stop believing in your dreams. Continue chasing them with courage and determination. There may be obstacles along the way, but don't let them define who you are. Instead, let them remind you of how strong, capable, and resilient you have become. I believe that one day you will achieve everything you have been praying and working hard for.
 
-With all my love,
-Zero ✨`
+As you continue your journey in life, may your heart always remain kind, humble, and grateful. May you find happiness not only in the biggest achievements but also in the smallest moments—a peaceful morning, the laughter of loved ones, the warmth of genuine friendships, and the countless blessings that God gives every single day.
+
+Whenever life becomes exhausting, remember to rest but never give up. It's okay to be tired because everyone experiences difficult seasons. What matters is that you continue moving forward with faith. I hope your smile never fades, even after the hardest battles, because your smile has the ability to brighten the lives of those around you.
+
+Thank you for being the wonderful person that you are. Whether you realize it or not, you've inspired people simply by being yourself. I pray that your heart will always be filled with hope, your mind with wisdom, and your soul with God's everlasting peace.
+
+May your future be brighter than your past, your faith stronger than your fears, and your joy greater than your worries. May every step you take bring you closer to the beautiful plans God has prepared especially for you.
+
+Always remember this promise from God's Word:
+
+«"For I know the plans I have for you," declares the Lord, "plans to prosper you and not to harm you, plans to give you hope and a future." — Jeremiah 29:11»
+
+And another reminder that gives strength during every season of life:
+
+«"Trust in the Lord with all your heart and lean not on your own understanding; in all your ways submit to Him, and He will make your paths straight." — Proverbs 3:5–6»
+
+As you celebrate your birthday today, I pray that laughter fills your heart, peace surrounds your soul, and love follows you wherever you go. May your dreams become reality, your prayers be answered in God's perfect timing, and your life become a testimony of His goodness and faithfulness.
+
+Thank you for existing, Angelyn. Thank you for unknowingly bringing joy and inspiration into my life. No matter where life takes us, I will always wish the very best for you. Keep smiling, keep believing, keep growing, and never lose the beautiful heart that makes you who you are.
+
+Happy Birthday once again, Angelyn. May God bless you abundantly today, tomorrow, and always. Enjoy your special day, create unforgettable memories, and never forget how precious and wonderfully made you are.
+
+Happy Birthday, Angelyn! May God always guide, protect, and bless you. 🎂🎉💖`
 
 export const wishesList = [
   {
