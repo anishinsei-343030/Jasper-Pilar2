@@ -5,7 +5,7 @@ import { useAudio } from './AudioProvider'
 import { useStore } from '@/store/useStore'
 
 export function MusicToggle() {
-  const { play, pause, skip, isPlaying } = useAudio()
+  const { play, pause, skip } = useAudio()
   const audioEnabled = useStore((s) => s.audioEnabled)
   const toggleAudio = useStore((s) => s.toggleAudio)
 

@@ -38,8 +38,16 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
     const handleEnded = () => {
       nextTrack()
     }
+    const handlePlay = () => setIsPlaying(true)
+    const handlePause = () => setIsPlaying(false)
     audio.addEventListener('ended', handleEnded)
-    return () => audio.removeEventListener('ended', handleEnded)
+    audio.addEventListener('play', handlePlay)
+    audio.addEventListener('pause', handlePause)
+    return () => {
+      audio.removeEventListener('ended', handleEnded)
+      audio.removeEventListener('play', handlePlay)
+      audio.removeEventListener('pause', handlePause)
+    }
   }, [nextTrack])
 
   useEffect(() => {
@@ -51,7 +59,6 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
     audio.load()
     if (audioEnabled) {
       audio.play().catch(() => setIsPlaying(false))
-      setIsPlaying(true)
     }
   }, [currentTrack, unlocked, audioEnabled])
 

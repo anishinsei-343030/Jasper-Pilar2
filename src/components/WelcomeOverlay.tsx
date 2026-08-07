@@ -86,7 +86,7 @@ export function WelcomeOverlay() {
                 WELCOME
               </p>
               <p className={`absolute z-40 top-1/2 left-1/2 bg-gradient-to-r from-[#0F172A] to-[#1D4ED8] bg-clip-text text-transparent -translate-x-1/2 h-full w-full transition-all duration-300 tracking-[0.2em] font-extrabold text-sm ${phase === 'letsgo' ? '-translate-y-[40%]' : 'translate-y-full'} group-hover:-translate-y-[40%]`}>
-                LET'S GO
+                LET&apos;S GO
               </p>
               <svg
                 className={`absolute w-full h-full scale-x-125 rotate-180 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 transition-all duration-300 ${phase === 'letsgo' ? 'animate-none -translate-y-[45%]' : 'animate-pulse'} group-hover:animate-none group-hover:-translate-y-[45%]`}
